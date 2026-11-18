@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jarvis — assistant IA gratuit</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside>
+  <div id="orb" title="Jarvis"></div>
+  <h1>Jarvis</h1>
+  <h2>Projets <button id="addP" title="Nouveau projet">+</button></h2><div id="projects"></div>
+  <h2>Inspiration <button id="addI" title="Ajouter une idée, un lien ou une image">+</button></h2><div id="board"></div>
+  <h2>Mémoire <button id="newC" title="Nouvelle conversation">↺</button></h2><div id="mem"></div>
+  <h2>Réglages</h2>
+  <input id="key" type="password" placeholder="Clé API Groq gratuite (gsk_…)" autocomplete="off">
+  <select id="model" aria-label="Modèle"></select>
+  <select id="voice" aria-label="Voix"></select>
+  <label><input type="checkbox" id="tts"> Réponses vocales</label>
+  <label><input type="checkbox" id="hf"> Mains libres</label>
+  <small>La clé reste dans ce navigateur. <a href="https://console.groq.com/keys" target="_blank" rel="noopener">Obtenir une clé gratuite</a></small>
+</aside>
+<main>
+  <div id="log"></div>
+  <form id="f">
+    <button type="button" id="mic" title="Parler">🎤</button>
+    <textarea id="in" rows="1" placeholder="Demandez à Jarvis : « conçois une bride de moteur », « fais un plan pour mon robot »…"></textarea>
+    <button title="Envoyer">➤</button>
+  </form>
+</main>
+<section id="pane"><iframe id="view" title="Zone d'affichage" sandbox="allow-scripts allow-downloads allow-modals"></iframe></section>
+<script src="app.js"></script>
+</body>
+</html>
